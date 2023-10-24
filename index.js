@@ -19,9 +19,6 @@ app.get('/', function (req, res) {
 
 
 app.post('/api/fileanalyse', upload.single('upfile'), (req, res) => {
-  if (!req.file) {
-    return res.status(400).send('No file uploaded');
-  }
 
   console.log(req.file);
   let name = req.file.originalname;
